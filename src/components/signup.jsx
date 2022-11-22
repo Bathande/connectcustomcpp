@@ -23,7 +23,7 @@ const Signup = () => {
         });
     
         Auth.currentAuthenticatedUser()
-          .then(currentUser => setUser(currentUser), console.log(this.currentUser))
+          .then(currentUser => setUser(currentUser))
           .catch(() => console.log("Not signed in"));
     
         return unsubscribe;
