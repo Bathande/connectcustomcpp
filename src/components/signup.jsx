@@ -66,7 +66,7 @@ const Signup = () => {
         
         Auth.currentAuthenticatedUser()
           .then(currentUser => setUser(currentUser))
-          .catch(() => console.log("Not signed in"));
+          .catch(() => console.log("Not signed in"))
     
         return unsubscribe;
       }, []);
