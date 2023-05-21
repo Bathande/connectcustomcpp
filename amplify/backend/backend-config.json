@@ -1,30 +1,58 @@
 {
-  "function": {},
-  "storage": {},
+  "api": {},
   "auth": {
-    "connectcustomcpp6d585241": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
+    "connectcustomcpp47705660": {
       "customAuth": false,
+      "dependsOn": [],
       "frontendAuthConfig": {
-        "socialProviders": [],
-        "usernameAttributes": [],
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": []
-        },
         "mfaConfiguration": "OFF",
         "mfaTypes": [
           "SMS"
         ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [
+          "FACEBOOK",
+          "GOOGLE"
+        ],
+        "usernameAttributes": [],
         "verificationMechanisms": [
           "EMAIL"
         ]
-      }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
     }
-  }
+  },
+  "function": {
+    "login": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_login_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "login"
+        }
+      ]
+    },
+    "AMPLIFY_function_login_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "login"
+        }
+      ]
+    }
+  },
+  "storage": {}
 }

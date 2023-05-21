@@ -13,7 +13,13 @@
     },
     "categories": {
       "auth": {
-        "connectcustomcpp6d585241": {}
+        "connectcustomcpp47705660": {}
+      },
+      "function": {
+        "login": {
+          "deploymentBucketName": "amplify-connectcustomcpp-dev-162259-deployment",
+          "s3Key": "amplify-builds/login-55544c7742504a58624a-build.zip"
+        }
       }
     }
   }
